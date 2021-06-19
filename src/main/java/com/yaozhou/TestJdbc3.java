@@ -28,6 +28,10 @@ public class TestJdbc3 {
             //通知数据库开启事务
             connection.setAutoCommit(false);
 
+            /**
+             * 数据库开启事务SQL语句：start transaction
+             */
+
             String sql1 = "update books set bookCounts = bookCounts -1 where bookName = 'MySQL'";
             //执行sql语句
             connection.prepareStatement(sql1).executeUpdate();
